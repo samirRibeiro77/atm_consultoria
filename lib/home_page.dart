@@ -10,6 +10,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  _abrirEmpresa(){}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,30 +24,41 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("imagens/logo.png"),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  child: Image.asset("imagens/menu_empresa.png"),
-                ),
-                GestureDetector(
-                  child: Image.asset("imagens/menu_servico.png"),
-                )
-              ],
+            Padding(
+              padding: EdgeInsets.only(top: 32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                  child: Image.asset("imagens/menu_empresa.png")
+                  ),
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset("imagens/menu_servico.png"),
+                  )
+                ],
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                GestureDetector(
-                  child: Image.asset("imagens/menu_cliente.png"),
-                ),
-                GestureDetector(
-                  child: Image.asset("imagens/menu_contato.png"),
-                )
-              ],
+            Padding(
+              padding: EdgeInsets.only(top: 32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset("imagens/menu_cliente.png"),
+                  ),
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset("imagens/menu_contato.png"),
+                  )
+                ],
+              ),
             )
           ],
         ),
