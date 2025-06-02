@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                     child: Image.asset("imagens/menu_cliente.png"),
                   ),
                   GestureDetector(
-                    onTap: _abrirServico,
+                    onTap: _abrirContato,
                     child: Image.asset("imagens/menu_contato.png"),
                   )
                 ],
