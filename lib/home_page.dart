@@ -1,3 +1,7 @@
+import 'package:atm/tela_cliente.dart';
+import 'package:atm/tela_contato.dart';
+import 'package:atm/tela_empresa.dart';
+import 'package:atm/tela_servico.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,7 +15,33 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  _abrirEmpresa(){}
+  _abrirEmpresa(){
+    Navigator.push(
+        context, 
+        MaterialPageRoute(builder: (context)=> TelaEmpresa())
+    );
+  }
+
+  _abrirServico(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context)=> TelaServico())
+    );
+  }
+
+  _abrirCliente(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context)=> TelaCliente())
+    );
+  }
+
+  _abrirContato(){
+    Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context)=> TelaContato())
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   child: Image.asset("imagens/menu_empresa.png")
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirServico,
                     child: Image.asset("imagens/menu_servico.png"),
                   )
                 ],
@@ -50,11 +80,11 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirCliente,
                     child: Image.asset("imagens/menu_cliente.png"),
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _abrirServico,
                     child: Image.asset("imagens/menu_contato.png"),
                   )
                 ],
