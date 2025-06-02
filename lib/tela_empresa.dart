@@ -25,23 +25,26 @@ class _TelaEmpresaState extends State<TelaEmpresa> {
         body: SingleChildScrollView(
           padding: EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Image.asset("imagens/detalhe_empresa.png"),
-                  Text(
-                    "Sobre a empresa",
-                    style: TextStyle(
-                      color: Colors.deepOrange,
-                      fontSize: 22,
+                  Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      "Sobre a empresa",
+                      style: TextStyle(
+                        color: Colors.deepOrange,
+                        fontSize: 22,
+                      ),
                     ),
                   )
                 ],
               ),
-              SizedBox(child: Container(height: 15.0)),
-              Text(_sobreEmpresa)
+              Padding(
+                padding: EdgeInsets.only(top: 15),
+                child: Text(_sobreEmpresa),
+              )
             ],
           ),
         ),
