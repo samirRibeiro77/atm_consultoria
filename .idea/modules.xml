@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/atm_consultoria.iml" filepath="$PROJECT_DIR$/atm_consultoria.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/atm_consultoria_android.iml" filepath="$PROJECT_DIR$/android/atm_consultoria_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/atm.iml" filepath="$PROJECT_DIR$/atm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/atm_android.iml" filepath="$PROJECT_DIR$/android/atm_android.iml" />
     </modules>
   </component>
 </project>
